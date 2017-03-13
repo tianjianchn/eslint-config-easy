@@ -1,0 +1,52 @@
+{
+  "name": "eslint-config-easy",
+  "description": "airbnb + babel + promise + import + react",
+  "version": "0.7.0",
+  "scripts": {
+    "lint": "eslint src test",
+    "test:only": "mocha --timeout 10000 --recursive --bail -r test/require.js --reporter spec test/**/*.test.js",
+    "test": "npm run lint && npm run test:only",
+    "prepublish": "npm test",
+    "calculate": "node scripts/calculate-config.js",
+    "diff-yours": "node scripts/diff-your-config.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "index.js",
+    "rules/"
+  ],
+  "engines": {
+    "node": ">= 4",
+    "npm": ">= 3"
+  },
+  "dependencies": {
+    "babel-eslint": "^7.0.0",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^6.4.0"
+  },
+  "devDependencies": {
+    "babel-register": "^6.24.0",
+    "mocha": "^3.2.0"
+  },
+  "homepage": "https://github.com/tianjianchn/javascript-packages/tree/master/packages/eslint-config-easy",
+  "repository": "https://github.com/tianjianchn/javascript-packages/tree/master/packages/eslint-config-easy",
+  "bugs": "https://github.com/tianjianchn/javascript-packages/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Tian Jian",
+    "email": "tianjianchn@qq.com"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "airbnb",
+    "babel",
+    "promise",
+    "import",
+    "module"
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "consistent-return": {
+    "airbnb": "error",
+    "easy": "off"
+  },
+  "default-case": {
+    "airbnb": [
+      "error",
+      {
+        "commentPattern": "^no default$"
+      }
+    ],
+    "easy": "off"
+  },
+  "func-names": {
+    "airbnb": "warn",
+    "easy": "error"
+  },
+  "global-require": {
+    "airbnb": "error",
+    "easy": "off"
+  },
+  "guard-for-in": {
+    "airbnb": "error",
+    "easy": "off"
+  },
+  "handle-callback-err": {
+    "airbnb": "off",
+    "easy": [
+      "error",
+      "^(err|error)$"
+    ]
+  },
+  "import/newline-after-import": {
+    "airbnb": "error",
+    "easy": "off"
+  },
+  "jsx-a11y/img-has-alt": {
+    "airbnb": "error",
+    "easy": "off"
+  },
+  "max-len": {
+    "airbnb": [
+      "error",
+      100,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "easy": "off"
+  },
+  "no-bitwise": {
+    "airbnb": "error",
+    "easy": "off"
+  },
+  "no-console": {
+    "airbnb": "warn",
+    "easy": "off"
+  },
+  "no-continue": {
+    "airbnb": "error",
+    "easy": "off"
+  },
+  "no-else-return": {
+    "airbnb": "error",
+    "easy": "off"
+  },
+  "no-empty": {
+    "airbnb": "error",
+    "easy": [
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ]
+  },
+  "no-mixed-operators": {
+    "airbnb": [
+      "error",
+      {
+        "groups": [
+          [
+            "+",
+            "-",
+            "*",
+            "/",
+            "%",
+            "**"
+          ],
+          [
+            "&",
+            "|",
+            "^",
+            "~",
+            "<<",
+            ">>",
+            ">>>"
+          ],
+          [
+            "==",
+            "!=",
+            "===",
+            "!==",
+            ">",
+            ">=",
+            "<",
+            "<="
+          ],
+          [
+            "&&",
+            "||"
+          ],
+          [
+            "in",
+            "instanceof"
+          ]
+        ],
+        "allowSamePrecedence": false
+      }
+    ],
+    "easy": "off"
+  },
+  "no-nested-ternary": {
+    "airbnb": "error",
+    "easy": "off"
+  },
+  "no-param-reassign": {
+    "airbnb": [
+      "error",
+      {
+        "props": true
+      }
+    ],
+    "easy": "off"
+  },
+  "no-plusplus": {
+    "airbnb": "error",
+    "easy": [
+      "warn",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ]
+  },
+  "no-restricted-syntax": {
+    "airbnb": [
+      "error",
+      "ForInStatement",
+      "ForOfStatement",
+      "LabeledStatement",
+      "WithStatement"
+    ],
+    "easy": [
+      "error",
+      "LabeledStatement",
+      "WithStatement"
+    ]
+  },
+  "no-shadow": {
+    "airbnb": "error",
+    "easy": [
+      "error",
+      {
+        "builtinGlobals": true,
+        "hoist": "functions",
+        "allow": [
+          "err"
+        ]
+      }
+    ]
+  },
+  "no-underscore-dangle": {
+    "airbnb": [
+      "error",
+      {
+        "allowAfterThis": false
+      }
+    ],
+    "easy": [
+      "error",
+      {
+        "allowAfterThis": true
+      }
+    ]
+  },
+  "no-unused-expressions": {
+    "airbnb": [
+      "error",
+      {
+        "allowShortCircuit": false,
+        "allowTernary": false
+      }
+    ],
+    "easy": [
+      "error",
+      {
+        "allowShortCircuit": true
+      }
+    ]
+  },
+  "no-unused-vars": {
+    "airbnb": [
+      "error",
+      {
+        "vars": "local",
+        "args": "after-used"
+      }
+    ],
+    "easy": [
+      "error",
+      {
+        "args": "none"
+      }
+    ]
+  },
+  "no-use-before-define": {
+    "airbnb": "error",
+    "easy": [
+      "error",
+      {
+        "functions": false,
+        "classes": true
+      }
+    ]
+  },
+  "no-useless-call": {
+    "airbnb": "off",
+    "easy": "error"
+  },
+  "object-property-newline": {
+    "airbnb": [
+      "error",
+      {
+        "allowMultiplePropertiesPerLine": true
+      }
+    ],
+    "easy": "off"
+  },
+  "one-var": {
+    "airbnb": [
+      "error",
+      "never"
+    ],
+    "easy": "off"
+  },
+  "promise/always-return": {
+    "easy": "error"
+  },
+  "promise/catch-or-return": {
+    "easy": "error"
+  },
+  "promise/no-native": {
+    "easy": "off"
+  },
+  "promise/param-names": {
+    "easy": "off"
+  },
+  "react/jsx-filename-extension": {
+    "airbnb": [
+      "error",
+      {
+        "extensions": [
+          ".jsx"
+        ]
+      }
+    ],
+    "easy": "off"
+  },
+  "react/prefer-es6-class": {
+    "airbnb": [
+      "error",
+      "always"
+    ],
+    "easy": "off"
+  },
+  "require-yield": {
+    "airbnb": "error",
+    "easy": "off"
+  },
+  "vars-on-top": {
+    "airbnb": "error",
+    "easy": "off"
+  }
+}
