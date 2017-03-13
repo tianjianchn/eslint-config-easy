@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-easy",
   "description": "airbnb + babel + promise + import + react",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "scripts": {
     "lint": "eslint src test",
     "test:only": "mocha --timeout 10000 --recursive --bail -r test/require.js --reporter spec test/**/*.test.js",
@@ -10,7 +10,6 @@
     "calculate": "node scripts/calculate-config.js",
     "diff-yours": "node scripts/diff-your-config.js"
   },
-  "main": "dist/index.js",
   "files": [
     "index.js",
     "rules/"
