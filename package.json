@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-easy",
   "description": "airbnb + babel + promise + import + react",
-  "version": "0.7.2",
+  "version": "0.8.0",
   "scripts": {
     "lint": "eslint src test",
     "test:only": "mocha --timeout 10000 --recursive --bail -r test/require.js --reporter spec test/**/*.test.js",
@@ -20,15 +20,18 @@
   },
   "dependencies": {
     "babel-eslint": "^7.0.0",
-    "eslint": "^3.17.1",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.0.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^6.4.0"
+    "eslint-plugin-react": "^7.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^3.17.1"
   },
   "devDependencies": {
     "babel-register": "^6.24.0",
+    "eslint": "^3.17.1",
     "mocha": "^3.2.0"
   },
   "homepage": "https://github.com/tianjianchn/eslint-config-easy",

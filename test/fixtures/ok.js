@@ -13,22 +13,22 @@ b = 1 + 2;
 a = { key: 'value', 'a-b': 2 };
 a = { key: 'value' };
 a = [1, 2];
-a = [1, 2];
 a = function f() { console.log(a); };
-a = function f() { console.log(a); };
-a = () => {};
 a = () => {};
 a = 'end spaces';
 
 c = a
   .b
   .c();
+c = a.b.c();
 
 // if/else statements
 if (a === 1) { console.log(a); } // allow single line if
 if (a === 1) console.log(a);
 if (a === 1) {
   console.log(a);
+} else {
+  console.log(b);
 }
 
 // function
@@ -46,6 +46,7 @@ f1((err) => {
   return f1();
 }());
 
+// class
 class A extends Object {
   m1 = 0;
   static m2 = 0

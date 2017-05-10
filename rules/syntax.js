@@ -27,6 +27,7 @@ module.exports = {
     'promise/catch-or-return': 'error',
     'promise/no-native': 'off',
     'promise/param-names': 'off',
+    'react/jsx-space-before-closing': 'off', // off for deprecated by react/jsx-tag-spacing
     'react/prefer-es6-class': 'off',
     'require-yield': 'off',
     'vars-on-top': 'off', // off to allow define vars in the middle of the body
