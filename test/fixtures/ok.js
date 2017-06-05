@@ -10,17 +10,20 @@ console.log(a, b, c);
 
 // different data type
 b = 1 + 2;
-a = { key: 'value', 'a-b': 2 };
+a = {
+  key: 'value',
+  'a-b': 2,
+};
 a = { key: 'value' };
 a = [1, 2];
 a = function f() { console.log(a); };
 a = () => {};
 a = 'end spaces';
 
-c = a
-  .b
-  .c();
-c = a.b.c();
+c = a.b().c().f()
+  .d()
+  .e();
+c = a.b.c().d();
 
 // if/else statements
 if (a === 1) { console.log(a); } // allow single line if
@@ -33,7 +36,7 @@ if (a === 1) {
 
 // function
 function f1(p1, p2, p3) { // allow not used params
-  console.log(p1);
+  console.log(p3);
   p1 = 'new value'; // allow reassign param
   p1.a = 'new value'; // allow reassign param prop
 }

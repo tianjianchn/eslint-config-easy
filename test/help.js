@@ -33,11 +33,16 @@ function codeShouldWarn(code, ruleName) {
   }
 }
 
-function codeShouldError(code, ruleName) {
+function codeShouldError(code) {
   const result = cli.executeOnText(code).results[0];
   if (result.errorCount !== 0 || result.warningCount === 0) {
     throw new Error(result);
   }
 }
 
-module.exports = { fileShouldOk, codeShouldOk, codeShouldWarn, codeShouldError };
+module.exports = {
+  fileShouldOk,
+  codeShouldOk,
+  codeShouldWarn,
+  codeShouldError,
+};
