@@ -11,11 +11,11 @@ console.log(a, b, c);
 // different data type
 b = 1 + 2;
 a = {
-  key: 'value',
-  'a-b': 2,
-  c: 3,
+  key: 'value', 'a-b': 2, c: 3,
 };
-a = { key: 'value' };
+a = {
+  key: 'value',
+};
 a = [1, 2];
 a = function f() { console.log(a); };
 a = () => {};
@@ -80,10 +80,14 @@ const React = {};// require('react');
 
 class MyComponent extends React.Component {
   getInitialState() {
-    return { name: 'this' };
+    return {
+      name: 'this',
+    };
   }
   onInput = (name) => { // use property initializer to avoid bind externaly
-    this.setState({ name });
+    this.setState({
+      name,
+    });
   }
   render() {
     return (

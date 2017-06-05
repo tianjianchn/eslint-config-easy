@@ -9,12 +9,14 @@ module.exports = {
     'react/jsx-filename-extension': 'off', // off to allow jsx in .js
     'object-property-newline': [ // force one property one line
       'error',
-      { allowMultiplePropertiesPerLine: true },
+      {
+        allowMultiplePropertiesPerLine: true,
+      },
     ],
     'object-curly-newline': ['error', { // if there are two more properties, then one property one line
       ObjectExpression: {
         multiline: true,
-        minProperties: 2,
+        minProperties: 1,
       },
       ObjectPattern: 'never',
     }],
@@ -24,7 +26,9 @@ module.exports = {
     }],
     'newline-per-chained-call': [ // one method call one line. method call is something like obj.foo(), not include obj['foo']
       'error',
-      { ignoreChainWithDepth: 3 }, // first line allow 3 method calls
+      {
+        ignoreChainWithDepth: 3,  // first line allow 3 method calls
+      },
     ],
     indent: [
       'error',
