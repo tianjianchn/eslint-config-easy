@@ -10,12 +10,8 @@ console.log(a, b, c);
 
 // different data type
 b = 1 + 2;
-a = {
-  key: 'value', 'a-b': 2, c: 3,
-};
-a = {
-  key: 'value',
-};
+a = { key: 'value', 'a-b': 2, c: 3 };
+a = { key: 'value' };
 a = [1, 2];
 a = function f() { console.log(a); };
 a = () => {};
@@ -38,6 +34,13 @@ if (a === 1) {
 } else {
   console.log(b);
 }
+
+function update(
+  {
+    id, name, email, remark, field2, field3,
+  } = {}, { other1, other2 }) {
+}
+update();
 
 // function
 function f1(p1, p2, p3) { // allow not used params
