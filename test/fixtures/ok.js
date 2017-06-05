@@ -13,6 +13,7 @@ b = 1 + 2;
 a = {
   key: 'value',
   'a-b': 2,
+  c: 3,
 };
 a = { key: 'value' };
 a = [1, 2];
@@ -24,6 +25,10 @@ c = a.b().c().f()
   .d()
   .e();
 c = a.b.c().d();
+
+const { x } = a;
+const { y, z, u } = a;
+console.log(x, y, z, u);
 
 // if/else statements
 if (a === 1) { console.log(a); } // allow single line if

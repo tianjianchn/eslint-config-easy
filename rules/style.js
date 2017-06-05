@@ -1,27 +1,50 @@
 
 // all commented rules below are fixable, so no need to off them
 
-module.exports = { rules: {
-  'import/newline-after-import': 'off',
-  'max-len': 'off', // off to allow unlimited line length
-  'one-var': 'off', // off to allow mutiple var delcaration statements
-  'react/jsx-filename-extension': 'off', // off to allow jsx in .js
-  'object-property-newline': [ // force one property one line
-    'error',
-      { allowMultiplePropertiesPerLine: false },
-  ],
-  'object-curly-newline': ['error', { // if there are two more properties, then one property one line
-    multiline: false,
-    minProperties: 2,
-  }],
-  'no-unused-vars': ['error', { // allow params in function not used
-    vars: 'all',
-    args: 'after-used',
-  }],
-  'newline-per-chained-call': [ // one method call one line. method call is something like obj.foo(), not include obj['foo']
-    'error',
+module.exports = {
+  rules: {
+    'import/newline-after-import': 'off',
+    // 'max-len': 'off', // off to allow unlimited line length
+    'one-var': 'off', // off to allow mutiple var delcaration statements
+    'react/jsx-filename-extension': 'off', // off to allow jsx in .js
+    'object-property-newline': [ // force one property one line
+      'error',
+      { allowMultiplePropertiesPerLine: true },
+    ],
+    'object-curly-newline': ['error', { // if there are two more properties, then one property one line
+      ObjectExpression: {
+        multiline: true,
+        minProperties: 2,
+      },
+      ObjectPattern: 'never',
+    }],
+    'no-unused-vars': ['error', { // allow params in function not used
+      vars: 'all',
+      args: 'after-used',
+    }],
+    'newline-per-chained-call': [ // one method call one line. method call is something like obj.foo(), not include obj['foo']
+      'error',
       { ignoreChainWithDepth: 3 }, // first line allow 3 method calls
-  ],
+    ],
+    indent: [
+      'error',
+      2,
+      {
+        SwitchCase: 1,
+        VariableDeclarator: 1,
+        outerIIFEBody: 1,
+        FunctionDeclaration: {
+          parameters: 1,
+          body: 1,
+        },
+        FunctionExpression: {
+          parameters: 1,
+          body: 1,
+        },
+        MemberExpression: 1,
+        ArrayExpression: 1,
+      },
+    ],
     // 'array-bracket-spacing': 'off',
     // 'arrow-body-style': 'off',
     // 'arrow-parens': 'off',
@@ -44,4 +67,5 @@ module.exports = { rules: {
     // 'spaced-comment': 'off',
     // quotes: 'off', // off to not care '' or "" or ``
     // semi: 'off', // off to not care whether use semicolon
-} };
+  },
+};
