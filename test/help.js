@@ -11,7 +11,7 @@ const cli = new eslint.CLIEngine({
 });
 
 function fileShouldOk(fileName) {
-  const result = cli.executeOnFiles([path.join(__dirname, 'fixtures', `${fileName}.js`)]).results[0];
+  const result = cli.executeOnFiles([path.join(__dirname, 'fixtures', `${fileName}`)]).results[0];
   if (result.errorCount !== 0 || result.warningCount !== 0) {
     throw new Error(`${JSON.stringify(result)} `);
   }

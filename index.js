@@ -9,5 +9,6 @@ module.exports = {
   parser: 'babel-eslint',
   plugins: [
     'promise',
+    'html',
   ],
 };

@@ -105,3 +105,4 @@ class MyComponent extends React.Component {
   }
 }
 console.log(MyComponent);
+

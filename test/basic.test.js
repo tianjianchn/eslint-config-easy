@@ -3,8 +3,11 @@
 const help = require('./help');
 
 describe('eslint-config-easy: basic', function () {
-  it('should pass on the ok file', function () {
-    help.fileShouldOk('ok');
+  it('should pass on the ok.js file', function () {
+    help.fileShouldOk('ok.js');
+  });
+  it('should pass on the ok.vue file', function () {
+    help.fileShouldOk('ok.vue');
   });
 
   // it('should fail on the error file', function(){
