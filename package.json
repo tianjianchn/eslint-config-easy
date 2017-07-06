@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-easy",
   "description": "airbnb + babel + promise + import + react",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "scripts": {
     "lint": "NODE_ENV=production eslint --ext .js,.vue,.html src test",
     "test:only": "mocha --timeout 10000 --recursive --bail -r test/require.js --reporter spec test/**/*.test.js",
