@@ -6,6 +6,7 @@
     "prefer-arrow-callback": "off",
     "func-names": "off",
     "import/no-unresolved": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "no-console": "off"
   }
 }

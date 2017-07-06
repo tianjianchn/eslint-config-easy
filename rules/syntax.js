@@ -9,7 +9,7 @@ module.exports = { rules: {
   'global-require': 'off', // off to allow dynamic require
   'handle-callback-err': ['error', '^(err|error)$'],
   'no-bitwise': 'off', // off to allow binary ops
-  'no-console': 'off', // off to allow console
+  'no-console': process.env.NODE_ENV === 'production' ? 2 : 0, // allow console during development
   'no-continue': 'off', // off to allow continue
   'no-else-return': 'off', // off to allow `else return;`
   'no-empty': ['error', { allowEmptyCatch: true }],
@@ -37,8 +37,10 @@ module.exports = { rules: {
   'react/prefer-es6-class': 'off',
   'require-yield': 'off',
   'vars-on-top': 'off', // off to allow define vars in the middle of the body
-    // 'object-shorthand': 'off', // off to not care whether use {x, f(){}}
-    // 'prefer-const': 'off', // off to allow let for un-reassigned vars
-    // 'wrap-iife': ['error', 'any'],
-    // strict: 'off', // off to allow 'use strict' in script file
+  // 'object-shorthand': 'off', // off to not care whether use {x, f(){}}
+  // 'prefer-const': 'off', // off to allow let for un-reassigned vars
+  // 'wrap-iife': ['error', 'any'],
+  // strict: 'off', // off to allow 'use strict' in script file
+  'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0, // allow debugger during development
+  'no-alert': process.env.NODE_ENV === 'production' ? 2 : 0, // allow debugger during development
 } };
