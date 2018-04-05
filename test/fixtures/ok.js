@@ -16,6 +16,13 @@ a = [1, 2];
 a = function f() { console.log(a); };
 a = () => {};
 a = 'end spaces';
+a.c
+  .e
+  .d();
+a = [
+  1,
+  2,
+];
 
 c = a.b().c().f()
   .d()
