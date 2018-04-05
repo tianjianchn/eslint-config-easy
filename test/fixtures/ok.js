@@ -45,14 +45,15 @@ if (a === 1) {
 function update({
   id, name, email, remark, field2, field3,
 } = {}, { other1, other2 }) {
+  console.log(id, name, email, remark, field2, field3, other1, other2);
 }
 update();
 
 // function
 function f1(p1, p2, p3) { // allow not used params
   console.log(p3);
-  p1 = 'new value'; // allow reassign param
-  p1.a = 'new value'; // allow reassign param prop
+  const p4 = 'new value'; // allow reassign param
+  p4.a = 'new value'; // allow reassign param prop
 }
 f1((err) => {
   if (err) console.log(err);// err param in callback must be handled
