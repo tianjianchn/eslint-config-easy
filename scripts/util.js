@@ -1,15 +1,16 @@
-/* eslint import/no-extraneous-dependencies:off*/
+/* eslint import/no-extraneous-dependencies:off */
 
 
 const path = require('path');
 const fs = require('fs');
 const eslint = require('eslint');
 const jsonfile = require('jsonfile');
-const uniq = require('lodash.uniq');
-const isEqual = require('lodash.isequal');
+const _ = require('lodash');
+
+const diffResultsDir = path.join(path.dirname(__dirname), 'diff-results');
 
 try {
-  fs.mkdirSync('calculated');
+  fs.mkdirSync(diffResultsDir);
 } catch (e) {}
 
 function extractConfig(configFile, outputFile) {
@@ -27,7 +28,7 @@ function extractConfig(configFile, outputFile) {
   const config = cli.getConfigForFile();
 
   if (outputFile) {
-    jsonfile.writeFileSync(path.join('calculated', outputFile), config, { spaces: 2 });
+    jsonfile.writeFileSync(path.join(diffResultsDir, outputFile), config, { spaces: 2 });
   }
 
   return config;
@@ -40,7 +41,7 @@ function diffConfig(left, right, keysMode, outputFile) {
     rightConfig = right[1];
   // rules diff
   let ruleNames = null;
-  if (keysMode === 'both') ruleNames = uniq(Object.keys(leftConfig.rules).concat(Object.keys(rightConfig.rules)));
+  if (keysMode === 'both') ruleNames = _.uniq(Object.keys(leftConfig.rules).concat(Object.keys(rightConfig.rules)));
   else if (keysMode === 'left') ruleNames = Object.keys(leftConfig.rules);
   else if (keysMode === 'right') ruleNames = Object.keys(rightConfig.rules);
   ruleNames = ruleNames.sort();
@@ -60,7 +61,7 @@ function diffConfig(left, right, keysMode, outputFile) {
       };
     } else if (leftRule.level === rightRule.level && leftRule.level === 'off') {
       continue;
-    } else if (leftRule.level !== rightRule.level || !isEqual(leftRule.options, rightRule.options)) {
+    } else if (leftRule.level !== rightRule.level || !_.isEqual(leftRule.options, rightRule.options)) {
       rulesDiff[ruleName] = {
         [leftName]: leftRule.compact,
         [rightName]: rightRule.compact,
@@ -68,7 +69,7 @@ function diffConfig(left, right, keysMode, outputFile) {
     }
   }
 
-  jsonfile.writeFileSync(path.join('calculated', outputFile), rulesDiff, { spaces: 2 });
+  jsonfile.writeFileSync(path.join(diffResultsDir, outputFile), rulesDiff, { spaces: 2 });
 }
 
 function parseRule(rule) {

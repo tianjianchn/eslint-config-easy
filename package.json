@@ -1,14 +1,14 @@
 {
   "name": "eslint-config-easy",
   "description": "airbnb + babel + promise + import + react",
-  "version": "0.14.0",
+  "version": "0.14.1",
   "scripts": {
     "lint": "NODE_ENV=production eslint --ext .js,.vue,.html src test",
     "test:only": "mocha --timeout 10000 --recursive --bail -r test/require.js --reporter spec test/**/*.test.js",
     "test": "npm run lint && npm run test:only",
     "prepublish": "npm test",
-    "calculate": "node scripts/calculate-config.js",
-    "diff-yours": "node scripts/diff-your-config.js"
+    "diff-airbnb": "node scripts/diff-airbnb-config.js",
+    "diff-custom": "node scripts/diff-custom-config.js"
   },
   "files": [
     "index.js",
@@ -19,21 +19,22 @@
     "npm": ">= 3"
   },
   "dependencies": {
-    "babel-eslint": "^7.0.0",
-    "eslint-config-airbnb": "^15.0.2",
-    "eslint-plugin-html": "^3.0.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^7.1.0"
+    "babel-eslint": "^8",
+    "eslint-config-airbnb": "^16",
+    "eslint-plugin-html": "^4",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jsx-a11y": "^6",
+    "eslint-plugin-promise": "^3",
+    "eslint-plugin-react": "^7"
   },
   "peerDependencies": {
-    "eslint": "^4.1.1"
+    "eslint": "^4"
   },
   "devDependencies": {
-    "babel-register": "^6.24.0",
-    "eslint": "^4.1.1",
-    "mocha": "^3.4.2"
+    "babel-register": "^6",
+    "eslint": "^4",
+    "jsonfile": "^4.0.0",
+    "mocha": "^5"
   },
   "homepage": "https://github.com/tianjianchn/eslint-config-easy",
   "repository": "https://github.com/tianjianchn/eslint-config-easy",

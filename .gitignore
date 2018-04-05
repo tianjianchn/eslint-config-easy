@@ -48,3 +48,4 @@ dist
 # Project specified below
 # =======================
 verify
+diff-results

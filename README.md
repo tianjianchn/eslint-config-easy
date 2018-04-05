@@ -51,8 +51,8 @@ If you want auto-fix .vue files in VSCode with its eslint plugin, you should add
 ```
 
 ## Tools for dev
-* `npm run calculate`: to see the whole config of `easy` and `airbnb`, and their differences(result in `calculated` dir)
-* `npm run diff-yours -- "your .eslintrc file full path"`: to see the differences between your current config and `easy`
+* `npm run diff-airbnb`: to see the whole config of `easy` and `airbnb`, and their differences(result in `diff-results` dir in current project)
+* `npm run diff-custom -- "the .eslintrc file full path"`: to see the differences between the specified config and `easy`
 
 ## License
 Licensed under MIT

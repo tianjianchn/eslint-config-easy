@@ -1,6 +1,6 @@
 
 // this is inline comment
-/* this is cross-lines comment*/
+/* this is cross-lines comment */
 
 // declare vars
 let a,
@@ -35,10 +35,9 @@ if (a === 1) {
   console.log(b);
 }
 
-function update(
-  {
-    id, name, email, remark, field2, field3,
-  } = {}, { other1, other2 }) {
+function update({
+  id, name, email, remark, field2, field3,
+} = {}, { other1, other2 }) {
 }
 update();
 
@@ -97,7 +96,7 @@ class MyComponent extends React.Component {
       <div className="rich">
         <input
           title="Input your name"
-          className="editor"
+          className={this.state.name}
           onInput={this.onInput}
         />
       </div>
