@@ -2,9 +2,7 @@
 module.exports = {
   extends: [
     'eslint-config-airbnb',
-    './rules/syntax.js',
-    './rules/style.js',
-    './rules/indeterminate.js',
+    './rules.js',
   ].map(require.resolve),
   parser: 'babel-eslint',
   plugins: [

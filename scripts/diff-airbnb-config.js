@@ -14,3 +14,5 @@ console.log('airbnb config in file ./diff-results/airbnb-config.json');
 diffConfig(['airbnb', airbnbConfig], ['easy', easyConfig], 'both', 'airbnb-vs-easy.json');
 console.log('diff between airbnb and easy in file ./diff-results/airbnb-vs-easy.json');
 
+console.log(() =>
+  'sss');
